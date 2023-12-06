@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="chinu"></p>
+    <button id="my-button" onclick="buttonPressed()">0</button>
+    
+    <!-- Uncomment the next line if you want to use a clearLocal function -->
+    <!-- <button onclick="clearLocal()">Clear</button> -->
+    
+    <script>
+        let buttonClick = 0;
+
+        function buttonPressed() {
+            let timeOfClick = buttonClick++;
+            document.getElementById("my-button").innerText = buttonClick;
+        }
+
+        // Uncomment the next lines if you define the clearLocal function
+        // function clearLocal() {
+        //     localStorage.clear();
+        // }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+//         let myDate=new Date();
+//         let getMyHour=myDate.getHours();
+// document.getElementById("chinu").innerHTML=getMyHour
+// if(getMyHour<12 &&1<getMyHour){
+//     document.getElementById("chinu").innerHTML="Good Morning"
+
+// }
+// else if(getMyHour<21&& getMyHour>12){
+//     document.getElementById("chinu").innerHTML="Good evening"
+
+// }
+// else{
+//     document.getElementById("chinu").innerHTML="Good Night"
+
+// }
+
+
+
+
+    </script>
+</body>
+</html>

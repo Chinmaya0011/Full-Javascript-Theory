@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input id="age" type="text" value="" onchange="calculateTicketPrice()">
+        <input type="text" id="gender" value="" onchange="calculateTicketPrice()">
+    </div>
+    <p id="show"></p>
+
+    <script>
+        function calculateTicketPrice() {
+            let age = document.getElementById("age").value;
+            let gender = document.getElementById("gender").value;
+            let tickOriginal = 100;
+            let ticketPrice;
+            
+            if (gender === "female") {
+                ticketPrice = tickOriginal / 2;
+            } else if (age <= 5) {
+                ticketPrice = 0;
+            } else if (age >= 5 && age <= 8) {
+                ticketPrice = tickOriginal / 2;
+            } else if (age >= 65) {
+                ticketPrice = tickOriginal * 70 / 100;
+            } else {
+                ticketPrice = tickOriginal;
+            }
+
+            document.getElementById('show').innerHTML = "Ticket Price: $" + ticketPrice.toString();
+        }
+    </script>
+</body>
+</html>

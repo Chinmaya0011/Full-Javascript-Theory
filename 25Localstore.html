@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p id="chinu"></p>
+  <script>
+    let student = {
+      name: "Chinmaya",
+      rollNo: 121203,
+      College: "PMEC"
+    };
+
+    // Storing data in localStorage
+    localStorage.setItem("student", JSON.stringify(student));
+
+    // Retrieving data from localStorage
+    let retrieved = JSON.parse(localStorage.getItem("student"));
+
+    console.log(retrieved);
+
+    // Displaying retrieved data in HTML
+    document.getElementById("chinu").textContent = JSON.stringify(retrieved);
+  </script>
+</body>
+</html>
